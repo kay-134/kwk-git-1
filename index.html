@@ -1,19 +1,69 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kayley's About Me</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<h1>Hi My Name is Kayley!</h1>
-<p>I am a creative coder based in Harlem, NYC!</p>
+    <body>
+        <div class="container">
+            <header>
+                <h1><a id = "title"  href="/index.html">Kayley Chery</a></h1>
+                
+            </header>
 
-<h3>Here are 5 fun facts about me!</h3>
+            <nav>
+                <h2 id="message"><span id="timeofhour">hi</span></h2>
+                <div class = "nav-display">
+                    <svg width="60" height="35"  fill="none" onClick = "mobileNav()">
+                        <line x1="10" y1="14" x2="50" y2="14" stroke="#213722" stroke-width="5" stroke-linecap="round" />
+                        <line x1="10" y1="22" x2="50" y2="22" stroke="#213722" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="10" y1="30" x2="50" y2="30" stroke="#213722" stroke-width="5" stroke-linecap="round"/>
 
-<li>
-    <ol>I play bass guitar</ol>
-    <ol>I studied abroad in London for 3 months</ol>
-    <ol>I am an older sister</ol>
-    <ol>I am an intern at Kode With Klossy this summer on their program operations team</ol>
-    <ol>I am studying Interactive Media Arts with a minor in Web Design at NYU</ol>
-</li>
+                    </svg>
 
-</body>
+                </div>
+                
+
+                <div class ="links">
+                    <h3><a href = "index.html" style = "color: #D5C8B5">Home</a></h3>
+                    <h3><a href = "kwk.html">My KWK Journey</a></h3>
+                    <h3><a href = "passions.html">My Hobbies</a></h3>
+                    <h3><a href = "funfacts.html"> Fun Facts</a></h3>
+                </div>
+            </nav>
+
+            <main>
+                <div class="flex-container">
+                    <center><h2>Hi! I'm Kayley an interdisciplinary artist based in Harlem, NY!</h2></center>
+                    <div>
+                        <img 
+                            src="/images/main/me-1500.png" 
+                            alt="A photo of Kayley grinning ear to ear"
+                            width="400" 
+                            height="auto" 
+                            srcset="./images/main/me-3000.png 2x, ./images/main/me-4500.png 3x">
+                        
+                    </div>
+                    <div>  
+                        <p><b>Kayley Chery</b> is a multidisciplinary visual artist and equity-minded storyteller whose practice weaves together education, technology, and social justice. </p>
+                        <p>She explores how creative interventions can foster connection and amplify marginalized voices through the intersection of art & interactive media. </p>
+                        <p>As an NYU Interactive Media Arts student, Kayley invites viewers into spaces of collective imagination, asking us how art can serve as both a mirror and catalyst for social transformation!</p>
+                        <center><p>Connect with me on <a href ="https://www.linkedin.com/in/kayley-chery-050255180/">LinkedIn</a> and/or follow <a href = "https://www.instagram.com/kayley.create/">my creative Instagram account</a></p></center>
+                    </div>
+                </div>
+            </main>
+        
+            <footer>
+                <h4>All from the mind and heart of Kayley Chery  </h4>
+            </footer>
+
+        </div>
+    </body>
+    <script src="script.js"></script>
 </html>

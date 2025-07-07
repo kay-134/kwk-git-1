@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+        <title>Kayley's About Me</title>
+        <link rel="stylesheet" href="style2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #D5C8B5;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #D5C8B5;
+  border: 4px solid #D5C8B5;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 0;
+  right: 30px;
+  border: medium solid #D5C8B5;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #D5C8B5;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 0;
+  left: 30px;
+  border: medium solid #D5C8B5;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #D5C8B5 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 10px 30px;
+  background-color: #D5C8B5;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid #D5C8B5;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #D5C8B5 transparent transparent;
+  z-index: 0;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  z-index: 0;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+
+}
+</style>
+</head>
+<body>
+<header>
+    <h1><a id = "title"  href="/index.html">Kayley Chery</a></h1>
+    <nav>
+       
+        <div class = "nav-display">
+            <svg width="60" height="35"  fill="none" onClick = "mobileNav()">
+                <line x1="10" y1="14" x2="50" y2="14" stroke="#213722" stroke-width="5" stroke-linecap="round" />
+                <line x1="10" y1="22" x2="50" y2="22" stroke="#213722" stroke-width="5" stroke-linecap="round"/>
+                <line x1="10" y1="30" x2="50" y2="30" stroke="#213722" stroke-width="5" stroke-linecap="round"/>
+
+            </svg>
+
+        </div>
+                      
+    
+                    <div class ="links">
+                        <h2 id="message"><span id="timeofhour">hi</span></h2>
+                        <h3><a href = "index.html">Home</a></h3>
+                        <h3><a href = "kwk.html" style = "color: #D5C8B5">My KWK Journey</a></h3>
+                        <h3><a href = "passions.html">My Hobbies</a></h3>
+                        <h3><a href = "funfacts.html"> Fun Facts</a></h3>
+                    </div>
+    </nav> 
+       
+</header>
+
+
+<!-- refered to this demo on W3 schools for the timeline! https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline -->
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>Summer 2020</h2>
+      <div>
+        <img 
+            src="images/kwk/web.jpeg" 
+            
+            width="40%" 
+            height="auto" >
+            <img 
+            src="images/kwk/web2.jpeg" 
+            
+            width="40%" 
+            height="auto" >
+    </div>
+      <p>I joined a virtual web development camp!</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Summer 2021</h2>
+      <img 
+            src="images/kwk/mobile.jpeg" 
+          
+            width="80%" 
+            height="auto" >
+      <p>I joined a virtual mobile development camp!</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Fall 2022</h2>
+      <img 
+            src="images/kwk/kwkcom.jpeg" 
+            
+            width="80%" 
+            height="auto" >
+      <p>I was a community ambassador!</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Summer 2023</h2>
+      <img 
+            src="images/kwk/IA.jpg" 
+       
+            width="80%" 
+            height="auto" >
+      <p>I was an IA for 3 camps!</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2024</h2>
+      <img 
+            src="images/kwk/codeabration.jpeg" 
+           
+            width="80%" 
+            height="auto" >
+      <p>I was a CODE-A-BRATION IA!</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Now! (2025)</h2>
+      <p>I am a Program Operations Intern with Kode With Klossy!</p>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
